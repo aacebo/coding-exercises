@@ -6,8 +6,7 @@
 module.exports = function quickSort(arr, start = 0, end = arr.length - 1) {
 	if (start >= end) return;
 
-	const mid = Math.floor((start + end) / 2);
-	const idx = partition(arr, start, end, mid);
+	const idx = partition(arr, start, end);
 
 	quickSort(arr, start, idx - 1);
 	quickSort(arr, idx, end);
@@ -17,9 +16,9 @@ module.exports = function quickSort(arr, start = 0, end = arr.length - 1) {
  * @param {Array<number>} arr
  * @param {number} start
  * @param {number} end
- * @param {number} mid
  */
-function partition(arr, start, end, mid) {
+function partition(arr, start, end) {
+	const mid = Math.floor((start + end) / 2);
 	let i = start;
 	let j = end;
 
