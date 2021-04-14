@@ -2,7 +2,7 @@
  * @param {number[]} x
  * @param {number[]} y
  * @param {number[][]} data [...[x1, x2, freq]]
- * @returns string[]
+ * @returns {string[]} table
  */
 module.exports = function(x, y, data) {
 	const ypos = y[1];
@@ -60,7 +60,7 @@ module.exports = function(x, y, data) {
 
 /**
  * @param {number} n
- * @returns string
+ * @returns {string}
  */
 function spaces(n) {
 	let res = '';
